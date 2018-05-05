@@ -63,6 +63,10 @@ h1, h2, h3, h4, p{
   outline: none;
 }
 
+.submit-btn:hover{
+  background-color: #20bf6b;
+}
+
 /*To Do Items Section*/
 .todo-section{
   background-color: #dfe4ea;
@@ -78,7 +82,7 @@ flex-wrap: wrap;
 font-family: 'Lato';
 font-size: 15px;
 line-height: 20px;
-padding:.5% .1% .5% .8%;
+padding:1% .1% .5% .8%;
 }
 
 li{
