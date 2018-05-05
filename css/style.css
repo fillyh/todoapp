@@ -14,12 +14,11 @@ h1, h2, h3, h4, p{
 .form-container h1{
   font-size: 50px;
   text-align: center;
-  color: #f1f2f6;
+  color: #ffffff;
   font-weight: 700;
 }
 .todo-form{
   width: 100%;
-  padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,31 +28,72 @@ h1, h2, h3, h4, p{
 
 .text-field{
   width: 60%;
+  min-width: 250px;
   height: 50px;
   padding: 10px;
   font-size: 30px;
   text-align: center;
   font-weight: 300;
   margin-bottom: 40px;
+  border: none;
+}
 
+.text-field:focus{
+  outline: none;
+  background-color: #f1f2f6;
 }
 
 .submit-btn{
-  width:60px;
-  background-color: #4CAF50;
-   border: none;
-   color: white;
-   text-decoration: none;
-   height: 50px;
-   padding:13px 15px;
-   margin-bottom: 40px;
-   cursor: pointer;
-   font-size: 15px;
-   font-family: 'Muli', sans-serif;
+  width:5%;
+  min-width: 50px;
+  background-color: #44bd32;
+  border: none;
+  color: white;
+  height: 70px;
+  padding: 0;
+  margin-bottom: 40px;
+  cursor: pointer;
+  font-size: 40px;
+  text-align: center;
+  font-family: 'Muli', sans-serif;
+  cursor: pointer;
+}
+
+.submit-btn:focus{
+  outline: none;
 }
 
 /*To Do Items Section*/
 .todo-section{
   background-color: #dfe4ea;
-  height: 500px;
+  min-height: 500px;
+}
+
+/*Items To Do Style*/
+ul{
+  list-style: none;
+  margin: 0 auto;
+  display: flex;
+flex-wrap: wrap;
+font-family: 'Lato';
+font-size: 15px;
+line-height: 20px;
+padding:.5% .1% .5% .8%;
+}
+
+li{
+  width:31%;
+  min-width:300px;
+  padding:10px;
+  min-height: 60px;
+  background-color: white;
+  margin:1%;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.done{
+  background-color: #ff4757;
+  color:#ffffff;
+  text-decoration: line-through;
 }
