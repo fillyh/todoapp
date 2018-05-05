@@ -1,0 +1,59 @@
+body{
+  margin: 0 auto;
+}
+
+h1, h2, h3, h4, p{
+  font-family: 'Muli', sans-serif;
+}
+/*Form*/
+.form-container{
+  background-color: #2e86de;
+  padding: 5px;
+}
+
+.form-container h1{
+  font-size: 50px;
+  text-align: center;
+  color: #f1f2f6;
+  font-weight: 700;
+}
+.todo-form{
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.text-field{
+  width: 60%;
+  height: 50px;
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+  font-weight: 300;
+  margin-bottom: 40px;
+
+}
+
+.submit-btn{
+  width:60px;
+  background-color: #4CAF50;
+   border: none;
+   color: white;
+   text-decoration: none;
+   height: 50px;
+   padding:13px 15px;
+   margin-bottom: 40px;
+   cursor: pointer;
+   font-size: 15px;
+   font-family: 'Muli', sans-serif;
+}
+
+/*To Do Items Section*/
+.todo-section{
+  background-color: #dfe4ea;
+  height: 500px;
+}
