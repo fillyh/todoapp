@@ -22,12 +22,13 @@ document.getElementById('button').addEventListener('click' , function(){
 
 });
 
+
 function addToList(text){
-    let listItems = document.getElementById('listItems');
+    let todo = document.getElementById('todo');
 
     let newItem = document.createElement('li');
     newItem.innerText = text;
 
-    listItems.insertBefore(newItem, listItems.childNodes[0]);
+    todo.insertBefore(newItem, todo.childNodes[0]);
 
 }
