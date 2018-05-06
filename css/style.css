@@ -88,8 +88,8 @@ ul{
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  font-family: 'Lato';
-  font-size: 15px;
+  font-family: 'Muli', sans-serif;
+  font-size: 18px;
   line-height: 20px;
   padding:1% .1% .5% .8%;
 }
