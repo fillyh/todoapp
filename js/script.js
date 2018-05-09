@@ -1,15 +1,13 @@
-//
-// const myForms = document.forms;
-// console.log(myForms[0]);
-
-// const itmDone = document.querySelector('li');
-// function markDone(){
-// itmDone.addEventListener('click',(e)=>{
-//     itmDone.classList.add('done');
-// })
-//
-// }
-// markDone();
+function markDone(){
+let todoList = document.querySelector('UL');
+todoList.addEventListener('click', function(e) {
+  if (e.target.tagName === 'LI') {
+    e.target.classList.toggle('done');
+  }
+}, false);
+console.log(todoList);
+}
+markDone();
 
 
 document.getElementById('button').addEventListener('click' , function(){
@@ -28,7 +26,10 @@ function addToList(text){
 
     let newItem = document.createElement('li');
     newItem.innerText = text;
+    newItem.classList.toggle("todoItm");
 
     todo.insertBefore(newItem, todo.childNodes[0]);
+
+    document.getElementById('placeHolder').style.display = "none";
 
 }
