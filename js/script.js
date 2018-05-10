@@ -1,3 +1,12 @@
+// 
+//  document.querySelector("#text-input").addEventListener('keypress', function (e){
+//   if (e.which === 13){
+//   }
+// });
+// console.log(hitEnter);
+
+
+
 function markDone(){
 let todoList = document.querySelector('UL');
 todoList.addEventListener('click', function(e) {
@@ -9,7 +18,7 @@ console.log(todoList);
 }
 markDone();
 
-
+function clickButton(){
 document.getElementById('button').addEventListener('click' , function(){
   let itmEntered = document.getElementById('text-input').value;
   if (itmEntered) {
@@ -17,8 +26,10 @@ document.getElementById('button').addEventListener('click' , function(){
     document.getElementById('text-input').value = "";
   }else {alert('Looks like you forgot to add something to do!');
 }
-
 });
+}
+
+clickButton()
 
 
 function addToList(text){
