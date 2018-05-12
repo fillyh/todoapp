@@ -13,7 +13,7 @@ h1, h2, h3, h4, p{
 /*Form*/
 .form-container{
   background-color: #2e86de;
-  padding: 5px;
+  padding: 5px 0 0 0;
 }
 
 .form-container h1{
@@ -79,12 +79,35 @@ h1, h2, h3, h4, p{
   background-color: #20bf6b;
 }
 
+/*View Options*/
+.menu-section{
+  width:100%;
+  background-color:#2c3e50;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+
 /*To Do Items Section*/
 .todo-section{
   background-color: #f1f2f6;
   min-height: 500px;
   padding:2%;
 }
+
+.viewbtns{
+background-color: #34495e;
+border: none;
+color: white;
+padding: 15px 10px;
+text-align: center;
+/* text-decoration: none; */
+display: inline-block;
+font-size: 16px;
+cursor: pointer;
+}
+
+
 
 /*Items To Do Style*/
 ul{
@@ -109,6 +132,11 @@ li{
   box-sizing: border-box;
   border-radius: 3px;
   position:relative;
+  white-space: pre-wrap;      /* CSS3 */
+   white-space: -moz-pre-wrap; /* Firefox */
+   white-space: -pre-wrap;     /* Opera <7 */
+   white-space: -o-pre-wrap;   /* Opera 7 */
+   word-wrap: break-word;
 }
 
 li:hover{

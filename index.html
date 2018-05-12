@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700" rel="stylesheet">
@@ -12,18 +12,21 @@
   <div class="form-container">
     <h1>Get It Done!</h1>
     <form class="todo-form" action="index.html" method="post" name="todo-form" id="form">
-      <input type="text" name="text-field" class="text-field" placeholder="Let's get things done!" id="text-input">
+      <input type="text" name="text-field" class="text-field" placeholder="Let's get things done!" id="text-input" maxlength="40">
       <input type="button" name="submit-btn" class="submit-btn" value="+" id="button">
 
     </form>
+  <div class="menu-section">
+    <div class="view-opts">
+      <button type="button" name="viewAll" id="viewAll" class="viewbtns">View All</button>
+      <button type="button" name="viewToDo" id="viewToDo" class="viewbtns">To Do</button>
+      <button type="button" name="viewDone" id="viewDone" class="viewbtns">Completed</button>
+    </div>
+  </div>
   </div>
   <div class="todo-section">
     <ul class="todo" id="todo">
-    <!-- <li>Hit the gym</li>
-    <li>JS Take Home ... :( </li>
-    <li>Punch myself for trying web development</li>
-    <li>Read a book ... ha!</li>
-    <li>Live life.</li> -->
+
   </ul>
   <div class="placeholder-div" id="placeHolder">
     <h2>Hello. Looks like I need things to do!</h2>
