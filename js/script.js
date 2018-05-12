@@ -60,3 +60,13 @@ markDone();
   });
   }
   viewToDo();
+
+  function viewAll(){
+  document.getElementById('viewAll').addEventListener('click' , function(e){
+    let showComplete = document.getElementsByClassName('done');
+    for (var i = 0; i < showComplete.length; i++){
+      showComplete[i].style.display = "block";
+    }
+  });
+  }
+  viewAll();
