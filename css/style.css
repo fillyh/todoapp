@@ -88,26 +88,34 @@ h1, h2, h3, h4, p{
   align-items:center;
 }
 
+
+.viewbtns{
+background-color: #2c3e50;
+border: none;
+color: #718093;
+padding: 15px 10px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+cursor: pointer;
+margin: 0 15px;
+}
+
+.viewbtns:hover{
+  color: #44bd32;
+}
+
+.btns-active{
+  color: #44bd32;
+}
+
 /*To Do Items Section*/
 .todo-section{
   background-color: #f1f2f6;
   min-height: 500px;
   padding:2%;
 }
-
-.viewbtns{
-background-color: #34495e;
-border: none;
-color: white;
-padding: 15px 10px;
-text-align: center;
-/* text-decoration: none; */
-display: inline-block;
-font-size: 16px;
-cursor: pointer;
-}
-
-
 
 /*Items To Do Style*/
 ul{
@@ -132,10 +140,10 @@ li{
   box-sizing: border-box;
   border-radius: 3px;
   position:relative;
-  white-space: pre-wrap;      /* CSS3 */
-   white-space: -moz-pre-wrap; /* Firefox */
-   white-space: -pre-wrap;     /* Opera <7 */
-   white-space: -o-pre-wrap;   /* Opera 7 */
+  white-space: pre-wrap;
+   white-space: -moz-pre-wrap;
+   white-space: -pre-wrap;
+   white-space: -o-pre-wrap;
    word-wrap: break-word;
 }
 
@@ -207,4 +215,11 @@ box-shadow: 0px 3px 1px #a5b1c2;
 .footer p{
   text-align: center;
   color: #fff;
+}
+
+/*Firefox Margin*/
+@-moz-document url-prefix() {
+    li {
+        margin:10px;
+    }
 }
