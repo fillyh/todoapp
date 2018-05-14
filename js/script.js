@@ -8,9 +8,12 @@ function addToList(text){
 
     todo.insertBefore(newItem, todo.childNodes[0]);
 
-    // todoBtn.classList.remove('btns-active');
-    // allBtn.classList.add('btns-active');
-    // doneBtn.classList.remove('btns-active');
+    let todoBtn = document.getElementById('viewOpts');
+    todoBtn.style.display="block";
+
+    todoBtn.classList.remove('btns-active');
+    allBtn.classList.add('btns-active');
+    doneBtn.classList.remove('btns-active');
     for (var i = 0; i < ulList.length; i++){
       ulList[i].style.display = "block";
     }
