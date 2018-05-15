@@ -4,21 +4,43 @@ function addToList(text){
 
     let newItem = document.createElement('li');
     newItem.innerText = text;
-    newItem.classList.toggle("todoItm");
+    newItem.classList.add("todoItm");
+    newItem.contentEditable = true;
 
     todo.insertBefore(newItem, todo.childNodes[0]);
 
-    let todoBtn = document.getElementById('viewOpts');
-    todoBtn.style.display="block";
+    let viewOpts = document.getElementById('viewOpts');
+    viewOpts.style.display="block";
 
     todoBtn.classList.remove('btns-active');
     allBtn.classList.add('btns-active');
     doneBtn.classList.remove('btns-active');
     for (var i = 0; i < ulList.length; i++){
       ulList[i].style.display = "block";
-    }
+    };
+
     document.getElementById('placeHolder').style.display = "none";
+
+
 }
+
+
+//Marks completed elements done
+function markDone(){
+let todoList = document.querySelector('UL');
+todoList.addEventListener('dblclick', function(e) {
+  if (e.target.tagName === 'LI') {
+    e.target.contentEditable = false;
+    // e.target.classList.remove('todoItm');
+    // e.target.classList.toggle('done');
+    e.target.classList.replace('todoItm', 'done');
+    // todoList.removeChild(todoList.childNodes[0]); //removes item
+  }
+}, false);
+console.log(todoList);
+}
+markDone();
+
 
 //Clicking the button adds Elements
 function clickButton(){
@@ -32,22 +54,6 @@ document.getElementById('button').addEventListener('click' , function(){
 });
 }
 clickButton();
-
-//Marks completed elements done
-function markDone(){
-let todoList = document.querySelector('UL');
-todoList.addEventListener('click', function(e) {
-  if (e.target.tagName === 'LI') {
-    // e.target.contentEditable = true;
-    // e.target.classList.remove('todoItm');
-    // e.target.classLisst.toggle('done');
-    e.target.classList.replace('todoItm', 'done');
-    // todoList.removeChild(todoList.childNodes[0]); //removes item
-  }
-}, false);
-console.log(todoList);
-}
-markDone();
 
 //Hit Enter Key
   document.querySelector("#text-input").addEventListener('keypress', function(e) {
