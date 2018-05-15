@@ -17,8 +17,6 @@ function addToList(text){
     for (var i = 0; i < ulList.length; i++){
       ulList[i].style.display = "block";
     }
-
-
     document.getElementById('placeHolder').style.display = "none";
 }
 
@@ -51,16 +49,14 @@ console.log(todoList);
 }
 markDone();
 
-
-  // document.querySelector("#text-input").addEventListener('keypress', function(e) {
-  //   e.preventDefault();
-  //   if (e.keyCode ===13){
-  //     let itmEntered = document.getElementById('text-input').value;
-  //     addToList(itmEntered);
-  //     document.getElementById('text-input').value="";
-  //     document.getElementById("button").click();
-  //   }
-  // })
+//Hit Enter Key
+  document.querySelector("#text-input").addEventListener('keypress', function(e) {
+    let key = e.which || e.keyCode;
+    if (key ===13){
+        e.preventDefault();
+      document.getElementById("button").click();
+    }
+  });
 
 //Tab Menu section
 let todoBtn = document.getElementById('viewToDo');
@@ -70,7 +66,8 @@ let allBtn = document.getElementById('viewAll');
 let todoItm = document.getElementsByClassName("todoItm");
 let complete = document.getElementsByClassName('done');
 let ulList = document.getElementsByTagName('LI');
-//view Todo Items
+
+//view Todo Items Button - Hide Completed
   function viewToDo(){
   document.getElementById('viewToDo').addEventListener('click' , function(e){
     todoBtn.classList.add('btns-active');
@@ -83,6 +80,7 @@ let ulList = document.getElementsByTagName('LI');
   }
   viewToDo();
 
+//Adds Display 'Block' to the items that had it removed
   function displayTodo(){
       document.getElementById('viewToDo').addEventListener('click' , function(e){
     for (var i = 0; i < todoItm.length; i++){
@@ -118,7 +116,7 @@ displayTodo();
   });
   }
   viewCompleted();
-
+//Display 'block' to the completed items that had it removed
   function displayCompleted(){
       document.getElementById('viewDone').addEventListener('click' , function(e){
         for (var i = 0; i < complete.length; i++){
@@ -127,16 +125,3 @@ displayTodo();
   });
 }
 displayCompleted();
-
-// function viewCompleted(){
-// document.getElementById('viewDone').addEventListener('click' , function(e){
-//   for (var i = 0; i < todoItm.length; i++){
-//     todoItm[i].style.display = "none";
-//     let showCompleted = todoItm[i].classList.contains('done');
-//     showCompleted.style.display = "block";
-//   }
-//
-// });
-//
-// }
-// viewCompleted();
