@@ -26,6 +26,8 @@ function addToList(text){
 
 
 //Marks completed elements done
+let popUp = document.getElementById('popUp');
+
 function markDone(){
 let todoList = document.querySelector('UL');
 todoList.addEventListener('dblclick', function(e) {
@@ -34,12 +36,19 @@ todoList.addEventListener('dblclick', function(e) {
     // e.target.classList.remove('todoItm');
     // e.target.classList.toggle('done');
     e.target.classList.replace('todoItm', 'done');
+    popUp.style.display="block";
     // todoList.removeChild(todoList.childNodes[0]); //removes item
   }
 }, false);
 console.log(todoList);
 }
 markDone();
+
+window.onclick = function(event){
+  if (event.target == popUp){
+    popUp.style.display="none";
+  }
+}
 
 
 //Clicking the button adds Elements
