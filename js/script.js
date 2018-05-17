@@ -24,7 +24,6 @@ function addToList(text){
 
 }
 
-
 //Marks completed elements done
 
 
@@ -41,12 +40,11 @@ todoList.addEventListener('dblclick', function(e) {
     window.onclick = function(event){
       if (event.target == popUp){
         popUp.style.display="none";
-      }
+      };
     };
     // todoList.removeChild(todoList.childNodes[0]); //removes item
   }
 }, false);
-console.log(todoList);
 }
 markDone();
 

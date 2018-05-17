@@ -134,8 +134,8 @@ ul{
   display: flex;
   flex-wrap: wrap;
   font-family: 'Muli', sans-serif;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 20px;
+  line-height: 25px;
 }
 
 li{
@@ -287,8 +287,8 @@ padding:4px;
   align-items:center;
   flex-wrap: wrap; */
   border-radius: 5px;
-
 }
+
 .popup-img{
   width:50%;
   background-color: #fff;
